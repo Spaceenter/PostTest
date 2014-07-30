@@ -1,7 +1,6 @@
 <?php
 
-include_once('PHPMailer-master/PHPMailerAutoload.php');
-include_once('db.php');
+include_once('mail.php');
 
 // send email
 if($_POST) {
@@ -17,16 +16,4 @@ else {
   echo '<a href="send.php">Go back to sending page.</a>';
 }
 
-function system_send_email($To, $Subject, $Body, $From='notify') {
-  $email = new PHPMailer();
-  $email->From = $From."@".EMAIL_DOMAIN;
-  $email->FromName = "ProtonMail";
-  $email->Subject = $Subject;
-  $email->Body = $Body;
-  $email->addReplyTo($email->From, $email->FromName);
-  $email->Sender = $email->From; // Return-Path
-  $email->addAddress($To);
-  $email->isHTML(true);
-  $email->XMailer=' ';
-  $email->send();
-} 
+?>

@@ -11,5 +11,6 @@ while (!feof($fin)) {
 fclose($fin);
 
 // save to database
+save_email_to_database($email);
 
 ?>
