@@ -11,7 +11,8 @@
     </style>
 </head>
 <body>
-	<a href="index.php">Go back to home page.</a>
+	<p><a href="index.php" class="btn btn-default">Go back to home page.</a></p>
+	<br>
 	<form action='process.php' method='post'>
 		To: <input class="form-control" type='text' name='to' value=''><br>
 		Msg Title: <input class="form-control" type='text' name='title' value=''><br>
