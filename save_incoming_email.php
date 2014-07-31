@@ -1,6 +1,8 @@
 #!/usr/bin/php
 <?php
 
+include_once('mail.php');
+
 // read from stdin 
 $fin = fopen("php://stdin", "r");
 $email = "";
